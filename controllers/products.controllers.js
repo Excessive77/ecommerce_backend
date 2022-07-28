@@ -12,7 +12,7 @@ const { storage } = require('../utils/firebase.util');
 const getAllProducts = catchAsync(async (req, res, next) => {
     const products = await Product.findAll({ where: { status: 'active' } });
 
-    res.satatus(200).json({ status: 'success', products });
+    res.status(200).json({ status: 'success', products });
 });
 
 const createProductByUser = catchAsync(async (req, res, next) => {
